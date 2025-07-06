@@ -2,5 +2,17 @@ document.getElementById('login-btn').addEventListener('click',function(event){
     event.preventDefault();
    const accountNumber = document.getElementById('account-number').value ;
    const pinNumber = document.getElementById('pin').value;
-   console.log(accountNumber,pinNumber);
+   const convertedPin = parseInt(pinNumber);
+  
+   if(accountNumber.length === 11){
+          if(convertedPin === 1234){
+            window.location.href="./main.html"
+          }
+          else{
+            alert('need a valid pin number')
+          }
+   }
+   else{
+    alert('need a valid account number')
+   }
 })
