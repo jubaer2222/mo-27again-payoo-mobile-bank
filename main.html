@@ -77,7 +77,7 @@
                                         <input value="1234" id="pin" type="number" class="input"
                                             placeholder="Type your PIN" required />
                                         <div><a class="link link-hover">Forgot password?</a></div>
-                                        <button id="add-money" class="btn btn-neutral mt-4 bg-blue-700 border-none">Add
+                                        <button id="add-money-btn" class="btn btn-neutral mt-4 bg-blue-700 border-none">Add
                                             Money</button>
                                     </fieldset>
                                 </form>
@@ -106,13 +106,13 @@
                                         <input value="01745782810" id="account-number" type="number" class="input"
                                             placeholder="Type your number" required />
                                         <label class="fieldset-label">Amount</label>
-                                        <input  id="amount" type="number" class="input"
+                                        <input  id="cashOUt-amount" type="number" class="input"
                                             placeholder="Type your ammount" required />
                                         <label class="fieldset-label">PIN</label>
-                                        <input value="1234" id="pin" type="number" class="input"
+                                        <input value="1234" id="cashOut-pin" type="number" class="input"
                                             placeholder="Type your PIN" required />
                                         <div><a class="link link-hover">Forgot password?</a></div>
-                                        <button id="add-money" class="btn btn-neutral mt-4 bg-blue-700 border-none">Cashout</button>
+                                        <button id="btn-cash-out" class="btn btn-neutral mt-4 bg-blue-700 border-none">Cashout</button>
                                     </fieldset>
                                 </form>
                             </div>
@@ -122,9 +122,10 @@
             </section>
         </header>
     </section>
-
+    <script src="script/utilities.js"></script>
     <script src="script/addMoney.js"></script>
     <script src="script/toggle.js"></script>
+    <script src="script/cashOut.js"></script>
 </body>
 
 </html>
