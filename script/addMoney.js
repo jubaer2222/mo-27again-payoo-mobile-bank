@@ -38,11 +38,21 @@ document.getElementById('add-money-btn')
         const amount = getInputValueById('amount') || 0 ;
         const pin = getInputValueById('pin');
         const accountNum = document.getElementById('account-num').value; // ✅ value নিচ্ছি
+        const mainBalance = getInnerTextById('main-balance');
 
-        console.log(amount, pin, accountNum);
+        console.log(amount, pin, accountNum, mainBalance);
 
         if (accountNum.length === 11) {
-            console.log('Account number is valid');
+             if(pin === 1234){
+           const sum = mainBalance + amount;
+        //    console.log(sum);
+            // document.getElementById('main-balance').innerText = sum
+            setInnerTextByIdAndValue('main-balance', sum)
+      }
+      else{
+        console.log('pin shathik nai');
+      }
+      
         } else {
             console.log('num thik nai');
         }
