@@ -1,3 +1,6 @@
-function getInputValueById (){
-    return 'hello boss'
+function getInputValueById (id){
+    const value = document.getElementById(id).value ;
+    const convertedValue = parseFloat(value);
+    return convertedValue;
+
 }
