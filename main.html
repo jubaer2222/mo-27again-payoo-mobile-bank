@@ -45,14 +45,14 @@
                         <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="">
                         <h3>Pay Bill</h3>
                     </div>
-                    <div class="box border p-4 text-center rounded-sm">
+                    <div id="transaction-box" class="box border p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="">
                         <h3>Transaction history</h3>
                     </div>
                 </div>
 
                 <section id="add-money" >
-                    <h2>Add money</h2>
+                    <h2 class="text-center font-bold">Add money</h2>
                     <div class="">
                         <div class="hero-content flex-col lg:flex-row-reverse">
 
@@ -87,7 +87,7 @@
                 </section>
 
                 <section id="cashout">
-                    <h2>Cash Out</h2>
+                    <h2 class="text-center font-bold">Cash Out</h2>
                     <div class="">
                         <div class="hero-content flex-col lg:flex-row-reverse">
 
@@ -111,13 +111,16 @@
                                         <label class="fieldset-label">PIN</label>
                                         <input value="1234" id="cashOut-pin" type="number" class="input"
                                             placeholder="Type your PIN" required />
-                                        <div><a class="link link-hover">Forgot password?</a></div>
+                                        
                                         <button id="btn-cash-out" class="btn btn-neutral mt-4 bg-blue-700 border-none">Cashout</button>
                                     </fieldset>
                                 </form>
                             </div>
                         </div>
                     </div>
+                </section>
+                <section id="transaction-history">
+                    <h2 class="text-3xl font-bold text-red-400 text-center">Transaction History</h2>
                 </section>
             </section>
         </header>
@@ -126,6 +129,7 @@
     <script src="script/addMoney.js"></script>
     <script src="script/toggle.js"></script>
     <script src="script/cashOut.js"></script>
+    <script src="script/transaction.js"></script>
 </body>
 
 </html>

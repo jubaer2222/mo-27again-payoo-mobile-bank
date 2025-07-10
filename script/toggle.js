@@ -1,3 +1,4 @@
+/*** 
 document.getElementById('cashout').style.display = 'none';
 
 document.getElementById('add-money-box')
@@ -11,3 +12,22 @@ document.getElementById('cash-out-box')
         document.getElementById('cashout').style.display = 'block';
         document.getElementById('add-money').style.display = 'none'
     })
+        */
+
+
+document.getElementById('cashout').style.display = 'none';
+
+document.getElementById('add-money-box')
+    .addEventListener('click', function () {
+        handleToggle('add-money', 'block')
+        handleToggle('cashout', 'none')
+    })
+document.getElementById('cash-out-box')
+    .addEventListener('click', function () {
+        handleToggle('add-money', 'none');
+        handleToggle('cashout', 'block')
+    })
+
+function handleToggle(id, status) {
+    document.getElementById(id).style.display = status;
+}
