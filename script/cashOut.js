@@ -29,6 +29,13 @@ document.getElementById('btn-cash-out')
         if (pin === 1234) {
             const sum = mainBalance - amount;
             document.getElementById('main-balance').innerText = sum;
+
+            const container = document.getElementById('transaction-container');
+             const p = document.createElement('p');
+            p.innerText =`
+            cashout ${amount} from  a account
+            `
+            container.appendChild(p);
         }
         else {
             console.log('pin thik nai');
