@@ -39,6 +39,8 @@ document.getElementById('add-money-btn')
         const pin = getInputValueById('pin');
         const accountNum = document.getElementById('account-num').value; // ✅ value নিচ্ছি
         const mainBalance = getInnerTextById('main-balance');
+        const selectedBank = document.getElementById('all-bank').value;
+        console.log(selectedBank);
 
         console.log(amount, pin, accountNum, mainBalance);
 
@@ -55,11 +57,19 @@ document.getElementById('add-money-btn')
             setInnerTextByIdAndValue('main-balance', sum);
 
             const container = document.getElementById('transaction-container');
-            const p = document.createElement('p');
-            p.innerText =`
-            added ${amount} from ${accountNum} account
+            // const p = document.createElement('p');
+            // p.innerText =`
+            // added ${amount} from ${accountNum} account
+            // `
+            // container.appendChild(p);
+            const div = document.createElement('div');
+            div.classList.add('bg-red-400')
+            div.innerHTML = `
+            <h1>Added Money from ${selectedBank}</h1>
+            <h3>${amount}</h3>
+            <p>account num : ${accountNum}</p>
             `
-            container.appendChild(p);
+            container.appendChild(div);
       }
       else{
         console.log('pin shathik nai');
