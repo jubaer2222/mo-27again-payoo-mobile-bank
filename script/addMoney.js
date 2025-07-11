@@ -47,7 +47,14 @@ document.getElementById('add-money-btn')
            const sum = mainBalance + amount;
         //    console.log(sum);
             // document.getElementById('main-balance').innerText = sum
-            setInnerTextByIdAndValue('main-balance', sum)
+            setInnerTextByIdAndValue('main-balance', sum);
+
+            const container = document.getElementById('transaction-container');
+            const p = document.createElement('p');
+            p.innerText =`
+            added ${amount} from ${accountNum} account
+            `
+            container.appendChild(p);
       }
       else{
         console.log('pin shathik nai');
