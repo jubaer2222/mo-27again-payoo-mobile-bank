@@ -42,6 +42,11 @@ document.getElementById('add-money-btn')
 
         console.log(amount, pin, accountNum, mainBalance);
 
+        if(amount < 0){
+            alert('positive num dite hobe')
+            return;
+        }
+
         if (accountNum.length === 11) {
              if(pin === 1234){
            const sum = mainBalance + amount;

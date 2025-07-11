@@ -26,10 +26,14 @@ document.getElementById('btn-cash-out')
         const mainBalance = getInnerTextById(
             'main-balance'
         )
+        if(amount > mainBalance){
+            alert('invalid amount');
+            return;
+        }
         if (pin === 1234) {
             const sum = mainBalance - amount;
             document.getElementById('main-balance').innerText = sum;
-
+  
             const container = document.getElementById('transaction-container');
              const p = document.createElement('p');
             p.innerText =`
